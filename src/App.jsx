@@ -4,7 +4,7 @@ import TodoForm from "./TodoForm.jsx";
 import "./index.css";
 
 function App() {
-  const [todos, setTodos] = useState([]);
+  const [todos, settodos] = useState([]);
 
   const addTodo = (text) => {
     const newTodo = {
@@ -12,15 +12,15 @@ function App() {
       text: text,
       completed: false,
     };
-    setTodos([...todos, newTodo]);
+    settodos([...todos, newTodo]);
   };
 
   const deleteTodo = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id));
+    settodos(todos.filter((todo) => todo.id !== id));
   };
 
   const toggleTodo = (id) => {
-    setTodos(
+    settodos(
       todos.map((todo) =>
         todo.id === id
           ? { ...todo, completed: !todo.completed }
