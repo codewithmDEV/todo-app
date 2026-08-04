@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1 className="app-title">📋 Todo List</h1>
+      <h1 className="app-title">Todo List</h1>
       <TodoForm onAddTodo={addTodo} />
       <TodoList
         todos={todos}
