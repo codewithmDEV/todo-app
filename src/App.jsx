@@ -1,9 +1,9 @@
-import {usestate} from "react";
+import {useState} from "react";
 import TodoList from "./TodoList.jsx";
 import TodoForm from "./TodoForm.jsx";
 import "./index.css"
 
-function app(){
+function App(){
     const [Todos, setTodos] = useState([])
 
     const addTodo = (text) => {
@@ -30,7 +30,7 @@ function app(){
         <div className="app-container">
             <h1 className="app-title"> Todo List</h1>
             <TodoForm onAddTodo={addTodo}/>
-            <Todolist todos={todos} onDelete={deleteTodo} onToggle={toggleTodo}/>
+            <Todolist Todos={todos} onDelete={deleteTodo} onToggle={toggleTodo}/>
             <div className="todo-footer">{todos.length} items</div>
         </div>
     );
